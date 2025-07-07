@@ -46,7 +46,7 @@
   // Customize search highlight color
   "vim.searchHighlightColor": "rgba(180, 142, 173, 0.5)",
   // Don't start on the first line of a file
-  "vim.startup.firstline": false,
+  "vim.startup.firstline": true,
   // #TODO: experimenting with those
   // Status Line Integration
   // Enable status bar color control based on Vim mode
