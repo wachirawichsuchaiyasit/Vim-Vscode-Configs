@@ -1,0 +1,310 @@
+[
+  // ======================
+  // 🟣 1. Window / Pane Navigation
+  // ======================
+  {
+    "command": "workbench.action.navigateLeft",
+    "key": "ctrl+h",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl+l",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.navigateUp",
+    "key": "ctrl+k",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.navigateDown",
+    "key": "ctrl+j",
+    "when": "vim.mode == 'Normal'"
+  },
+  // ======================
+  // 🟣 2. Window Split
+  // ======================
+  {
+    "command": "workbench.action.splitEditor",
+    "key": "shift+v",
+    "when": "vim.mode == 'Normal' && filesExplorerFocus"
+  },
+  {
+    "command": "workbench.action.splitEditorDown",
+    "key": "shift+h",
+    "when": "vim.mode == 'Normal' && filesExplorerFocus"
+  },
+  // ======================
+  // 🟣 3. Window Resizing
+  // ======================
+  {
+    "command": "workbench.action.increaseViewSize",
+    "key": "ctrl+up",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.decreaseViewSize",
+    "key": "ctrl+down",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.decreaseViewSize",
+    "key": "ctrl+left",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.increaseViewSize",
+    "key": "ctrl+right",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 4. Buffer / Editor Tab Navigation
+  // ======================
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "shift+h",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "shift+l",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.closeActiveEditor",
+    "key": "space b d",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.closeOtherEditors",
+    "key": "space b o",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 5. File / Explorer Operations
+  // ======================
+  // --- Global Commands (Leader Key) ---
+  {
+    "command": "workbench.view.explorer",
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.quickOpen",
+    "key": "space space",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.quickOpen",
+    "key": "space f f",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.openRecent",
+    "key": "space f o",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.files.save",
+    "key": "space f s",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.files.saveAll",
+    "key": "space f S",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space e r",
+    "command": "workbench.action.files.revealActiveFileInExplorer",
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorTextFocus"
+  },
+  // --- Explorer-Specific Commands (Single Key) ---
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // ======================
+  // 🟣 7. LSP Actions (Code / Go To / Rename)
+  // ======================
+  {
+    "command": "editor.action.codeAction",
+    "key": "space c a",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.rename",
+    "key": "space c r",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.gotoSymbol",
+    "key": "space c s",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.revealDefinition",
+    "key": "space g d",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.goToReferences",
+    "key": "space g r",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.goToImplementation",
+    "key": "space g i",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.showHover",
+    "key": "shift-k",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 8. Search
+  // ======================
+  {
+    "command": "workbench.action.findInFiles",
+    "key": "space s g",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 9. Git
+  // ======================
+  {
+    "command": "workbench.view.scm",
+    "key": "space g g",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 10. Debug
+  // ======================
+  {
+    "command": "workbench.action.debug.selectandstart",
+    "key": "space d a",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.debug.stop",
+    "key": "space d t",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.debug.stepOver",
+    "key": "space d o",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.debug.action.toggleBreakpoint",
+    "key": "space d b",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.debug.action.showDebugHover",
+    "key": "space d e",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.debug.continue",
+    "key": "space d c",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // ======================
+  // 🟣 11. Terminal
+  // ======================
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "space t t",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "vim.mode == 'Normal' && terminalFocus"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.new",
+    "when": "vim.mode == 'Normal' && terminalFocus"
+  },
+  // {
+  //   "key": "space t m",
+  //   "command": "workbench.action.toggleMaximizedPanel",
+  //   "when": "vim.mode == 'Normal' && terminalFocus"
+  // },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "vim.mode == 'Normal' && terminalFocus"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "vim.mode == 'Normal' && terminalFocus"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.action.terminal.kill",
+    "when": "vim.mode == 'Normal' && terminalFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode == 'Normal'"
+  },
+  // ======================
+  // 🟣 12. Visual Mode Line Movement
+  // ======================
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift-k",
+    "when": "vim.mode == 'VisualLine'"
+  },
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift-j",
+    "when": "vim.mode == 'VisualLine'"
+  },
+  // ======================
+  // 🟣 13. Multi-cursor (VSCode-style)
+  // ======================
+  {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl+n",
+    "when": "vim.mode == 'Normal' && editorTextFocus || vim.mode == 'Visual'"
+  }
+]
